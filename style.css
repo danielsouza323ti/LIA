@@ -56,7 +56,7 @@ img {
   nav a:hover{
     background-color: #ffffff;
     color: black;
-    transform: scale(1.2);
+  
 
   }
   h2 {
@@ -70,6 +70,4 @@ img {
   header{
     background-color: #000000;
   }
-  
-
 
