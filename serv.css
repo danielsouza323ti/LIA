@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    background-color: #000000;
+    background-color: #5fa05a;
     color: aliceblue;
     font-size: 25px;
   line-height: 50px;
@@ -20,7 +20,7 @@ nav{
     padding: 10px;
     background-color: #3d3b3b;
     overflow: hidden;
-  background-color: #000000;
+  background-color: #5fa05a;
   
 }
 nav a{
@@ -32,13 +32,13 @@ nav a{
     text-decoration: none;
     display: inline; 
     overflow: hidden;
-  background-color: #000000;
+  background-color: #5fa05a;
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 
 }
 footer{
     text-align: center;
-    background-color: #000000;
+    background-color: #5fa05a;
     color: aliceblue;
 }
 *{
@@ -55,7 +55,7 @@ img {
   }
   nav a:hover{
     background-color: #ffffff;
-    color: black;
+    color: #5fa05a;
   
 
   }
@@ -68,7 +68,7 @@ img {
     color: #ffffff;
   }
   header{
-    background-color: #000000;
+    background-color: #5fa05a;
   }
        
   li a{

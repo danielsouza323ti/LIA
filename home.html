@@ -2,33 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SergipeTec2 / Home</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1><a href="home.html">SergipeTec 2.0</a></h1>
+        <img src="LOGODEFINITIVA.png" alt="Logo do Projeto" class="logo"> <!-- Caminho para a logo -->
         <nav>
             <ul>
-            <a href="home.html">Home</a>
-            <a href="sobre.html">Sobre a startup</a>
-            <a href="serv.html">Produtos e serviços</a>
-            <a href="login.html">Login</a>
-        </ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre a startup</a></li>
+                <li><a href="serv.html">Sobre o aplicativo</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h2>Bem Vindo a startup</h2>
-            <p>Uma breve descrição da startup e sua missão</p>
+            <h2>Bem-vindo ao nosso site</h2>
+            <div class="content-container" style="background-color: #5fa05a; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="carousel" style="flex: 1; margin-right: 20px;">
+                    <div class="carousel-images">
+                        <img src="Ipaese3.jpeg" alt="Imagem 1" style="display: block;"> <!-- Exibir a primeira imagem por padrão -->
+                        <img src="ipaese2.jpeg" alt="Imagem 2" style="display: none;">
+                        <img src="ipaese1.jpeg" alt="Imagem 3" style="display: none;">
+                    </div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="description" style="flex: 1;"> <!-- Estilo para ocupar o espaço restante -->
+                    <h2>Validação da nossa ideia</h2>
+                    <p>No dia <strong>00/00/0000</strong>, tivemos a oportunidade de visitar o <strong>IPAESE</strong>, uma instituição de ensino dedicada a pessoas com deficiência auditiva. Essa experiência nos proporcionou uma compreensão mais profunda das dificuldades enfrentadas por essas pessoas e nos permitiu identificar como nossa solução pode realmente beneficiá-las. A visita foi enriquecedora, revelando as necessidades específicas e os desafios que nossa proposta visa abordar.</p>
+                </div>
+            </div>
         </section>
     </main>
-    <img src="eusabo.jpg">
     <footer>
-        <p>&copy; 2024 startup exemplo. todos os direitos reservados.</p>
-        <p>endereço: Rua Exemplo, 123 - Cidadec Exemplo - Etado Exemplo</p>
+        <p>&copy; 2024 startup exemplo. Todos os direitos reservados.</p>
+        <p>Endereço: Rua Exemplo, 123 - Cidade Exemplo - Estado Exemplo</p>
         <p>Telefone: (00) 1234-5678ZZ | E-mail: startup@example.com</p>
     </footer>
+    
+    <script>
+        // Script do carrossel
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll(".carousel-images img");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none";
+            });
+        }
+    </script>
 </body>
 </html>
