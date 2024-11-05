@@ -10,7 +10,7 @@
 body {
   background-color: #777;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem; /* Escalável conforme o root font-size */
   line-height: 1.6;
 }
 
@@ -23,10 +23,10 @@ header {
 
 /* Estilo para a logo */
 .logo {
-  max-width: 100px; /* Defina a largura máxima da logo */
-  height: auto; /* Mantém a proporção da imagem */
-  display: block; /* Faz com que a imagem seja tratada como bloco */
-  margin: 0 auto; /* Centraliza a imagem */
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Navegação */
@@ -37,20 +37,20 @@ nav {
 }
 
 nav ul {
-  list-style-type: none; /* Remove as bolinhas padrão */
-  padding: 0; /* Remove o padding padrão */
-  display: flex; /* Utiliza Flexbox para exibir itens em linha */
-  justify-content: center; /* Centraliza os itens */
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav li {
-  margin: 0 15px; /* Espaçamento entre os itens */
+  margin: 0 15px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem; /* Escalável */
   font-weight: 500;
   padding: 10px 15px;
   border-radius: 5px;
@@ -65,12 +65,12 @@ nav a:hover {
 
 /* Layout principal */
 .content {
-  text-align: center; /* Centraliza o conteúdo dentro da seção */
+  text-align: center;
 }
 
 /* Estilo para o texto principal */
 .main-text {
-  font-size: 28px;
+  font-size: 1.75rem;
   margin-bottom: 20px;
 }
 
@@ -79,7 +79,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px; /* Espaçamento entre carrossel e mini texto */
+  gap: 40px;
 }
 
 /* Estilo para o carrossel */
@@ -87,7 +87,7 @@ nav a:hover {
   position: relative;
   max-width: 500px;
   width: 100%;
-  height: 300px; /* Define uma altura fixa para o carrossel */
+  height: 300px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -99,9 +99,9 @@ nav a:hover {
 }
 
 .carousel img {
-  min-width: 100%; /* Cada imagem ocupa 100% da largura do carrossel */
+  min-width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+  object-fit: cover;
 }
 
 /* Botões de navegação do carrossel */
@@ -111,8 +111,8 @@ button.prev, button.next {
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 1rem;
+  padding: 12px;
   border: none;
   cursor: pointer;
   z-index: 1;
@@ -141,12 +141,12 @@ button.prev:hover, button.next:hover {
 }
 
 .mini-text h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .mini-text p {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.5;
 }
 
@@ -157,7 +157,7 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 /* Efeitos para transições */
@@ -168,68 +168,79 @@ header, nav, footer {
 /* Responsividade */
 @media (max-width: 768px) {
   .carousel-container {
-      flex-direction: column; /* Muda para coluna em telas menores */
+      flex-direction: column;
+      gap: 20px;
   }
-  
+
   .carousel {
       max-width: 100%;
+      height: 250px; /* Altura reduzida para telas menores */
   }
 
   .mini-text {
       max-width: 100%;
       text-align: center;
+  }
+
+  .mini-text h3 {
+      font-size: 1.25rem;
+  }
+
+  .mini-text p {
+      font-size: 1rem;
+  }
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 0.875rem;
+  }
+
+  .carousel {
+      height: 200px; /* Altura menor para telas muito pequenas */
+  }
+
+  .main-text {
+      font-size: 1.5rem;
+  }
+
+  button.prev, button.next {
+      font-size: 0.875rem;
+      padding: 10px;
   }
 }
 
 /* Container principal do carrossel e descrição */
 .content-container {
-  background-color: #5fa05a; /* Fundo verde */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  display: flex; /* Disposição em linha */
-  justify-content: space-between; /* Espaço entre os itens */
-  align-items: center; /* Centralização vertical */
+  background-color: #5fa05a;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .carousel {
-  flex: 1; /* Ocupa espaço igual */
-  margin-right: 20px; /* Espaço à direita */
+  flex: 1;
+  margin-right: 20px;
 }
 
 .description {
-  flex: 1; /* Ocupa espaço igual */
+  flex: 1;
 }
+
 .container {
   display: flex;
-  flex-direction: column; /* Alinha elementos em coluna */
-  align-items: center; /* Centraliza horizontalmente */
+  flex-direction: column;
+  align-items: center;
 }
+
 img {
   max-width: 100%;
-  height: auto; /* Mantém a proporção da imagem */
-}
-@media (max-width: 768px) {
-  .carousel-container {
-      flex-direction: column; /* Muda para coluna em telas menores */
-  }
-
-  .carousel {
-      max-width: 100%;
-  }
-  
-  .mini-text {
-      max-width: 100%;
-      text-align: center;
-  }
-}
-body {
-  font-size: 16px; /* Pode ser menor para dispositivos móveis */
-}
-
-.mini-text h3 {
-  font-size: 20px; /* Tamanho menor para h3 em telas menores */
-}
-
-.mini-text p {
-  font-size: 16px; /* Tamanho do texto pode ser ajustado */
+  height: auto;
 }
