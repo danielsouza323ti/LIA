@@ -9,32 +9,23 @@
 </head>
 <body>
     <header>
-        <img src="liapng.png" alt="Logo do Projeto" class="logo"> <!-- Caminho para a logo -->
+        <img src="LOGODEFINITIVA.png" alt="Logo do Projeto" class="logo"> <!-- Caminho para a logo -->
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="">Sobre nós</a></li>
-                
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Bem-vindo ao nosso site</h2>
-            <div class="content-container" style="background-color: #5fa05a; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-                <div class="carousel" style="flex: 1; margin-right: 20px;">
-                    <div class="carousel-images">
-                        <img src="Ipaese3.jpeg" alt="Imagem 1" style="display: block;"> <!-- Exibir a primeira imagem por padrão -->
-                        <img src="ipaese2.jpeg" alt="Imagem 2" style="display: none;">
-                        <img src="ipaese1.jpeg" alt="Imagem 3" style="display: none;">
-                    </div>
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
-                <div class="description" style="flex: 1;"> <!-- Estilo para ocupar o espaço restante -->
-                    <h2>Validação da nossa ideia</h2>
-                    <p>No dia <strong>00/00/0000</strong>, tivemos a oportunidade de visitar o <strong>IPAESE</strong>, uma instituição de ensino dedicada a pessoas com deficiência auditiva. Essa experiência nos proporcionou uma compreensão mais profunda das dificuldades enfrentadas por essas pessoas e nos permitiu identificar como nossa solução pode realmente beneficiá-las. A visita foi enriquecedora, revelando as necessidades específicas e os desafios que nossa proposta visa abordar.</p>
-                </div>
+        <section class="info-section">
+            <div class="text-content">
+                <h2>Quem Somos</h2>
+                <p>O LIA é uma solução inovadora criada no programa InovarSE, organizado pelo SergipeTec em parceria com o Banese. Nosso aplicativo utiliza inteligência artificial para oferecer tradução bidirecional para pessoas com deficiência auditiva, facilitando a comunicação e promovendo a inclusão de forma prática e acessível.</p>
+                <button class="cta-button">CONHEÇA A HISTÓRIA COMPLETA</button>
+            </div>
+            <div class="image-content">
+                <img src="ipaese2.jpeg" alt="Imagem representativa">
             </div>
         </section>
     </main>
@@ -43,26 +34,5 @@
         <p>Endereço: Avenida José Conrado de Araújo, 731 - Rosa Elze, São Cristóvão - SE, 49100-000</p>
         <p>Telefone: (00) 1234-5678ZZ | E-mail: lia.libras.ia@gmail.com</p>
     </footer>
-    
-    <script>
-        // Script do carrossel
-        let slideIndex = 0;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-            const slides = document.querySelectorAll(".carousel-images img");
-            if (n >= slides.length) { slideIndex = 0; }
-            if (n < 0) { slideIndex = slides.length - 1; }
-            slides.forEach((slide, index) => {
-                slide.style.display = index === slideIndex ? "block" : "none";
-            });
-        }
-    </script>
 </body>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </html>
