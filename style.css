@@ -8,7 +8,7 @@
 
 /* Corpo da página */
 body {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   color: #333;
   font-size: 1rem;
   line-height: 1.6;
@@ -17,31 +17,52 @@ body {
 
 /* Cabeçalho */
 header {
+  background-color: #f8f8f8;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #ffffff;
+  
   padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+/* Header normal no topo, sem sombra */
+#site-header {
+  background-color: #f8f8f8;
+  transition: box-shadow 0.3s ease;
+  box-shadow: none;
+}
+
+#site-header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
   max-width: 80px;
   margin-left: 20px;
+  transition: max-width 0.3s ease, transform 0.3s ease;
 }
 
+#site-header.scrolled .logo {
+  max-width: 60px;
+  transform: scale(0.8);
+}
+
+/* Move os links para a esquerda */
+#site-header.scrolled nav ul {
+  transform: translateX(-30px);
+}
 nav ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
   margin-right: 20px;
+  transition: transform 0.3s ease;
 }
-
 nav a {
   color: #333;
   text-decoration: none;
@@ -244,4 +265,20 @@ footer {
     padding: 10% 0;
     margin-top: auto;
   }
+}
+/* Header normal no topo, sem sombra */
+#site-header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+  box-shadow: none;
+}
+
+/* Quando rolar, adiciona sombra */
+#site-header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
